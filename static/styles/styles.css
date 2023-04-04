@@ -1,0 +1,123 @@
+.btn-primary {
+    display:block !important;
+    margin: 60px auto 10px auto!important;
+    background-color: #1c464b !important;
+    border: none !important;
+    font-size: 1.2rem !important;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 70px 20px;
+}
+
+form .form-field {
+    position: relative;
+}
+
+form .form-field input,
+form .form-field textarea,
+form .form-field select {
+    border: 1px solid #a9a9a9;
+    padding: 13px 10px 10px 10px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+form .form-field input::placeholder,
+form .form-field textarea::placeholder {
+    color: white;
+}
+
+form .form-field select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #444444;
+}
+
+form .form-field input:focus,
+form .form-field textarea:focus,
+form .form-field select:focus {
+    outline: none;
+    border-color: #1c464b;
+    box-shadow: none !important;
+}
+
+form .form-field label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    background-color: white;
+    color: #c5c5c5;
+    font-size: 1rem;
+    padding: 1px 3px 1px 1px;
+    transition: all .2s ease-in-out;
+}
+
+form .form-field label:hover {
+    cursor: text;
+}
+
+form .form-field .required-field:focus + label,
+form .form-field .required-field:valid + label,
+form .form-field .required-field:required:invalid:not(:placeholder-shown) + label,
+form .form-field select + label {
+    left: -5px;
+    top: -12px;
+    color: #1c464b;
+    font-size: .8rem;
+}
+
+/*specific for phone number not required*/
+form .form-field .not-required-field:focus + label,
+form .form-field input:not(:placeholder-shown) + label {
+    left: -5px;
+    top: -12px;
+    color: #1c464b;
+    font-size: .8rem;
+}
+
+form .form-field textarea:focus + label,
+form .form-field textarea:valid + label,
+form .form-field textarea:required:invalid:not(:placeholder-shown) + label {
+    left: -5px;
+    top: -12px;
+    color: #1c464b;
+    font-size: .8rem;
+}
+
+form #message {
+    height: 150px;
+}
+
+.required-field-disclaimer {
+    margin: -10px 0 0 0;
+    color: #c5c5c5;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: .7rem;
+}
+
+form button[type="submit"] {
+    margin-top: -10px;
+    font-size: 1rem;
+    width: 140px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 300px;
+    border: 1px solid #1c464b;
+    color: #1c464b;
+}
+
+form button[type="submit"]:hover {
+    cursor: pointer;
+}
